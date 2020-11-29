@@ -66,8 +66,8 @@ spec:
       operator: In
       values:
       - us-east-1
-      - us-west-1
-      - europe-west3
+      - ap-southeast-1
+      - ap-northeast-1
     matchLabels:
-      environment: dev
+      environment: pacman-dev
       apps/pacman: deployed
