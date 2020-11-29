@@ -13,26 +13,26 @@ metadata:
     apps.open-cluster-management.io/github-path: hack/manifests/policies
 spec:
   type: GitHub
-  pathname: https://github.com/mdelder/k8s-pacman-app.git
+  pathname: https://github.com/kowillow/k8s-pacman-app.git
   # secretRef:
   #   name: github-credentials
-# ---
-# apiVersion: app.k8s.io/v1beta1
-# kind: Application
-# metadata:
-#   name: tower-resource-operator
-#   namespace: tower-resource-operator
-# spec:
-#   componentKinds:
-#   - group: apps.open-cluster-management.io
-#     kind: Subscription
-#   descriptor: {}
-#   selector:
-#     matchExpressions:
-#     - key: app.kubernetes.io/name
-#       operator: In
-#       values:
-#       - tower-resource-operator
+---
+apiVersion: app.k8s.io/v1beta1
+kind: Application
+metadata:
+  name: tower-resource-operator
+  namespace: tower-resource-operator
+spec:
+  componentKinds:
+  - group: apps.open-cluster-management.io
+    kind: Subscription
+  descriptor: {}
+  selector:
+    matchExpressions:
+    - key: app.kubernetes.io/name
+      operator: In
+      values:
+      - tower-resource-operator
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
